@@ -1,0 +1,8 @@
+#coursesList{
+    margin: 45px;
+    padding: 25px;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    width: 225px;
+    box-shadow: 4px 3px 13px 0 rgba(184,184,184,1);
+}
