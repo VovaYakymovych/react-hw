@@ -1,6 +1,6 @@
 
 import './App.css'
-import CoursesArrayComponent from "./components/coursesArrayComponent.tsx";
+import CoursesArrayComponent from "./components/coursesComponent/coursesArrayComponent.tsx";
 
 
 function App() {

@@ -1,0 +1,35 @@
+.component-wrapper{
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 60px;
+    justify-content: center;
+}
+
+.courseWrapper{
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 13px 0 rgba(184,184,184,1);
+
+    width: 400px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.courseWrapper img{
+    width: 75px;
+}
+.courseWrapper h2{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.modules{
+    font-weight: bold;
+    background-color: #fff6e9;
+    border-radius: 20px;
+    width: 200px;
+    padding: 20px;
+}
+.moduleLi{
+    font-weight: normal;
+}

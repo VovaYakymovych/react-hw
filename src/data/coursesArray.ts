@@ -6,7 +6,7 @@ export const courses:coursesArrayType[] = [
         monthDuration: 5,
         hourDuration: 909,
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js'],
-        logo: '',
+        logo: 'https://owu.com.ua/wp-content/uploads/2023/12/js.svg',
         price: 0,
         rating: 5,
         avgResult: 99
@@ -27,7 +27,7 @@ export const courses:coursesArrayType[] = [
             'git',
             'java core',
             'java advanced'],
-        logo: '',
+        logo: 'https://owu.com.ua/wp-content/uploads/2023/12/java.svg',
         price: 0,
         rating: 4.998,
         avgResult: 97
@@ -48,7 +48,7 @@ export const courses:coursesArrayType[] = [
             'git',
             'python core',
             'python advanced'],
-        logo: '',
+        logo: 'https://owu.com.ua/wp-content/uploads/2023/12/python.svg',
         price: 0,
         rating: 4.812,
         avgResult: 98
@@ -58,7 +58,7 @@ export const courses:coursesArrayType[] = [
         monthDuration: 4,
         hourDuration: 909,
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'QA/QC'],
-        logo: '',
+        logo: 'https://owu.com.ua/wp-content/uploads/2025/03/qa-1.webp',
         price: 0,
         rating: 4.65,
         avgResult: 97
@@ -80,7 +80,7 @@ export const courses:coursesArrayType[] = [
             'node.js',
             'python',
             'java'],
-        logo: '',
+        logo: 'https://owu.com.ua/wp-content/uploads/2024/07/fullstack.png',
         price: 0,
         rating: 4.772,
         avgResult: 100
@@ -90,7 +90,7 @@ export const courses:coursesArrayType[] = [
         monthDuration: 4,
         hourDuration: 909,
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass'],
-        logo: '',
+        logo: 'https://owu.com.ua/wp-content/uploads/2024/08/front-ico.svg',
         price: 0,
         rating: 4.53,
         avgResult: 90
