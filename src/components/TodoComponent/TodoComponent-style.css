@@ -1,0 +1,12 @@
+.todoComponentWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 35px;
+    padding: 20px;
+    background-color: antiquewhite;
+
+    border-radius: 20px;
+    width: 200px;
+}
