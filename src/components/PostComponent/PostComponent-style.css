@@ -1,0 +1,15 @@
+.post{
+    padding: 40px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background-color: antiquewhite;
+    border-radius: 25px;
+}
+.post h2{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
