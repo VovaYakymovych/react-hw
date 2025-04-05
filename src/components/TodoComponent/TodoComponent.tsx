@@ -12,7 +12,7 @@ const TodoComponent:FC<TodoPropType> = ({item}) => {
             <h2>{item.title}</h2>
             <p className={'id'}>ID: {item.id}</p>
             <p className={'userId'}>User`s ID: {item.userId}</p>
-            <p className={'completed'}>Status: {item.completed}</p>
+            <p className={'completed'}>Status: {item.completed.toString()}</p>
         </div>
     );
 };
