@@ -1,0 +1,17 @@
+.todoComponentWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin: 35px;
+    padding: 20px;
+    background-color: antiquewhite;
+
+    border-radius: 20px;
+    width: 250px;
+}
+
+.todoComponentWrapper h2{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
