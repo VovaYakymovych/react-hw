@@ -1,5 +1,5 @@
 import {useEffect,useState} from "react";
-import {PostsType} from "../../models/dummyJsonResponseType.ts";
+import {PostsType} from "../../models/dummyJsonResponsePostsType.ts";
 import {getDummyJsonResPosts} from "../../service/service-functions.ts";
 import Post from "../post/post.tsx";
 import './posts-style.css'

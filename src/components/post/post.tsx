@@ -1,4 +1,4 @@
-import {PostsType, ReactionsType} from "../../models/dummyJsonResponseType.ts";
+import {PostsType, ReactionsType} from "../../models/dummyJsonResponsePostsType.ts";
 import {FC} from "react";
 import './post-style.css'
 
