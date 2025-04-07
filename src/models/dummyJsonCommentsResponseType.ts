@@ -1,3 +1,5 @@
+import {dummyJsonResponseType} from "./dummyJsonResponseType.ts";
+
 export type UserType = {
   id: number;
   username: string;
@@ -12,9 +14,6 @@ export type CommentsType = {
   user: UserType;
 }
 
-export type dummyJsonResponseCommentsType = {
+export type dummyJsonResponseCommentsType = dummyJsonResponseType & {
   comments: CommentsType[];
-  total: number;
-  skip: number;
-  limit: number;
 }

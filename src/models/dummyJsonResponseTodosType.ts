@@ -1,3 +1,5 @@
+import {dummyJsonResponseType} from "./dummyJsonResponseType.ts";
+
 export type TodosType = {
   id: number;
   todo: string;
@@ -5,9 +7,6 @@ export type TodosType = {
   userId: number;
 }
 
-export type dummyJsonResponseTodosType = {
+export type dummyJsonResponseTodosType = dummyJsonResponseType & {
   todos: TodosType[];
-  total: number;
-  skip: number;
-  limit: number;
 }

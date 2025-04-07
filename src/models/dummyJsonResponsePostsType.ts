@@ -1,3 +1,5 @@
+import {dummyJsonResponseType} from "./dummyJsonResponseType.ts";
+
 export type ReactionsType = {
   likes: number;
   dislikes: number;
@@ -13,9 +15,6 @@ export type PostsType = {
   userId: number;
 }
 
-export type dummyJsonResponsePostsType = {
+export type dummyJsonResponsePostsType = dummyJsonResponseType & {
   posts: PostsType[];
-  total: number;
-  skip: number;
-  limit: number;
 }
