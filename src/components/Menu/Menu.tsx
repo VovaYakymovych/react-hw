@@ -11,10 +11,7 @@ const Menu = () => {
                 <Link to={'comments'}>Comments</Link>
             </li>
             <li>
-                <Link to={'/posts'}>Posts</Link>
-            </li>
-            <li>
-                <Link to={'products'}>Products</Link>
+                <Link to={'posts'}>Posts</Link>
             </li>
         </ul>
     );

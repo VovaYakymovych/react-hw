@@ -1,14 +1,12 @@
 
 import './App.css'
-import {Outlet} from "react-router-dom";
-import Menu from "./components/Menu/Menu.tsx";
+import MainLayout from "./layouts/MainLayout.tsx";
 
 function App() {
 
   return (
     <>
-      <Menu/>
-      <Outlet/>
+      <MainLayout/>
     </>
   )
 }
