@@ -1,0 +1,48 @@
+.dummy-comment{
+    padding: 40px;
+    width: 400px;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 5px 5px 14px -3px rgba(153,153,153,1);
+    border-radius: 25px;
+}
+.dummy-comment h2{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.user{
+    background-color: #472ccc;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    border-radius: 25px;
+}
+.user h3{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.likes{
+    padding: 10px;
+    background-color: #472ccc;
+    color: white;
+    width: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.likes:hover{
+    scale: 1.1;
+    background-color: #3a24a5;
+    transition: 0.3s;
+}

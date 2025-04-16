@@ -1,5 +1,6 @@
 import {UsersDummyType} from "../../../models/UsersTypes/dummyJsonResponseUsersType.ts";
 import {FC} from "react";
+import './dummy-user-style.css'
 
 type UsersDummyPropsType = {
     user: UsersDummyType
@@ -8,19 +9,22 @@ type UsersDummyPropsType = {
 const DummyJsonUser: FC<UsersDummyPropsType> = ({user}) => {
     return (
         <div>
-            <div className="user">
+            <div className="dummy-user">
                 <img src={user.image} alt={user.username} className="user-image"/>
-                <h2>{user.firstName} {user.lastName} ({user.username})</h2>
-                <p><strong>ID:</strong> {user.id}</p>
-                <p><strong>Age:</strong> {user.age}</p>
-                <p><strong>Gender:</strong> {user.gender}</p>
-                <p><strong>Email:</strong> {user.email}</p>
-                <p><strong>Phone:</strong> {user.phone}</p>
-                <p><strong>Birth Date:</strong> {user.birthDate}</p>
-                <p><strong>Blood Group:</strong> {user.bloodGroup}</p>
-                <p><strong>Height / Weight:</strong> {user.height} cm / {user.weight} kg</p>
-                <p><strong>Eye Color:</strong> {user.eyeColor}</p>
-                <p><strong>Hair:</strong> {user.hair.color}, {user.hair.type}</p>
+
+                <div className={'user-info'}>
+                    <h2>{user.firstName} {user.lastName} ({user.username})</h2>
+                    <p><strong>ID:</strong> {user.id}</p>
+                    <p><strong>Age:</strong> {user.age}</p>
+                    <p><strong>Gender:</strong> {user.gender}</p>
+                    <p><strong>Email:</strong> {user.email}</p>
+                    <p><strong>Phone:</strong> {user.phone}</p>
+                    <p><strong>Birth Date:</strong> {user.birthDate}</p>
+                    <p><strong>Blood Group:</strong> {user.bloodGroup}</p>
+                    <p><strong>Height / Weight:</strong> {user.height} cm / {user.weight} kg</p>
+                    <p><strong>Eye Color:</strong> {user.eyeColor}</p>
+                    <p><strong>Hair:</strong> {user.hair.color}, {user.hair.type}</p>
+                </div>
 
                 <div className={'user-address'}>
                     <h3>🏠 Address</h3>

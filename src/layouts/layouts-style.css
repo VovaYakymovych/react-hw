@@ -1,0 +1,23 @@
+.buttons-wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 650px;
+    margin: 50px auto 0 auto;
+
+}
+.link-button{
+    width: 300px;
+    height: 75px;
+    background-color: #472ccc;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 800;
+    border-radius: 20px;
+    box-shadow: 5px 5px 14px -3px rgba(153,153,153,1);
+    transition: 0.3s;
+}
+.link-button:hover{
+    scale: 1.02;
+    background-color: #3a24a5;
+    transition: 0.3s;
+}

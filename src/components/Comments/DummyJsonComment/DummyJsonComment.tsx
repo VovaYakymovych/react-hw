@@ -1,5 +1,6 @@
 import {CommentsDummyType, UserType} from "../../../models/CommentsTypes/dummyJsonResponseCommentsType.ts";
 import {FC, useState} from "react";
+import './dummyJsonComment-style.css'
 
 type CommentDummyPropsType = {
     item: CommentsDummyType
@@ -16,7 +17,7 @@ const DummyJsonComment: FC<CommentDummyPropsType> = ({item}) => {
     };
 
     return (
-        <div className={'comment'}>
+        <div className={'dummy-comment'}>
             <h2 className={'body'}>{item.body}</h2>
             <p className={'ids'}>Comment ID: {item.id} | Post ID: {item.postId}</p>
             <div className={'user'}>

@@ -1,6 +1,6 @@
 import {PostsDummyType, ReactionsType} from "../../../models/PostsTypes/dummyJsonResponsePostsType.ts";
 import {FC} from "react";
-
+import './dummy-post-style.css'
 
 type PostDummyPropsType = {
     item: PostsDummyType
@@ -12,7 +12,7 @@ const DummyJsonPost: FC<PostDummyPropsType> = ({item}) => {
 
     return (
 
-        <div className={'post'}>
+        <div className={'dummy-post'}>
             <h2 className={'title'}>{item.title}</h2>
             <p className={"ids"}>Post ID: {item.id} | Users`s ID: {item.userId}</p>
             <p className={'body'}>{item.body}</p>

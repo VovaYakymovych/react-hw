@@ -1,0 +1,16 @@
+.dummy-user{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 5px 5px 14px -3px rgba(153,153,153,1);
+    border-radius: 25px;
+    padding: 30px;
+
+}
+.dummy-user img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}

@@ -1,15 +1,17 @@
 import {Link, Outlet} from "react-router-dom";
-
+import './layouts-style.css'
 
 const PostsLayout = () => {
     return (
         <div>
-            <Link to="jsonplaceholder">
-                <button>To JsonPlaceholder Posts</button>
-            </Link>
-            <Link to="dummyjson">
-                <button>To DummyJson Posts</button>
-            </Link>
+            <div className={'buttons-wrap'}>
+                <Link to="jsonplaceholder">
+                    <button className={'link-button'}>To JsonPlaceholder Posts</button>
+                </Link>
+                <Link to="dummyjson">
+                    <button className={'link-button'}>To DummyJson Posts</button>
+                </Link>
+            </div>
             <Outlet/>
         </div>
     );

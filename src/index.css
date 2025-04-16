@@ -4,7 +4,8 @@
 .api-res-component{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
     justify-content: center;
     padding: 30px;
+    box-sizing: border-box;
 }

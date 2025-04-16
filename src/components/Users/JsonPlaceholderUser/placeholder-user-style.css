@@ -1,0 +1,14 @@
+.placeholder-user{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    flex-wrap: wrap;
+    gap: 30px;
+    box-shadow: 5px 5px 14px -3px rgba(153,153,153,1);
+    border-radius: 25px;
+    padding: 30px;
+}
+.placeholder-user h2{
+    font-size: 1.3rem;
+    font-weight: 800;
+}

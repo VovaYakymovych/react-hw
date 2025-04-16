@@ -1,0 +1,15 @@
+.dummy-post{
+    padding: 40px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    box-shadow: 5px 5px 14px -3px rgba(153,153,153,1);
+    border-radius: 25px;
+}
+.dummy-post h2{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
