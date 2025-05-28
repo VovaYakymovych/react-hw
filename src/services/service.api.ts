@@ -1,0 +1,1 @@
+const baseURL = DUMMY_JSON_BASE_URL
