@@ -1,1 +1,1 @@
-const baseURL = DUMMY_JSON_BASE_URL
+const baseURL = VITE_DUMMY_JSON_BASE_URL
