@@ -1,9 +1,9 @@
 import {createBrowserRouter} from "react-router-dom";
-import App from "../App.tsx";
+import MainLayout from "../layouts/MainLayout.tsx";
 import UsersPage from "../pages/UsersPage.tsx";
 
 export const router = createBrowserRouter([
-    {path:'/',element:<App/>,children:[
+    {path:'/',element:<MainLayout/>,children:[
             {path:'users',element:<UsersPage/>}
         ]}
 ])
