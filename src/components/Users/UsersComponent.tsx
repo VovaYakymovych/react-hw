@@ -1,20 +1,25 @@
 import {useEffect, useState} from "react";
 import {getUsers} from "../../services/service.api.ts";
 import {IUser} from "../../models/IUser.ts";
+import {IDummyJsonUsersResponse} from "../../models/IDummyJsonUsersResponse.ts";
+import UserComponent from "./UserComponent.tsx";
+import {useSearchParams} from "react-router-dom";
 
 const UsersComponent = () => {
+    const [query]=useSearchParams({page: '1'})
     const [users,setUsers] = useState<IUser[]>([])
+
+
     useEffect(()=>{
-        getUsers()
-            .then(response => setUsers(response))
-    },[])
+        const currentPage =query.get('page') || '1'
+        getUsers(currentPage).then(({users}: IDummyJsonUsersResponse) => {setUsers(users)});
+    },[query])
 
     return (
         <div className={'api-res-component'}>
-            {users.map(value => <UsersComponent user={value} key={value.id}/>)}
+            {users.map((user:IUser) => <UserComponent user={user} key={user.id}/>)}
         </div>
     )
-};
 };
 
 export default UsersComponent;
