@@ -22,7 +22,7 @@ button{
 
     transition: 0.3s;
 }
-button:hover{
+.headerAndPaginationButton:hover{
     background-color: #d3c8ca;
     color: #ae1130;
 }

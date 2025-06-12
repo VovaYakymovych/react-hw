@@ -7,12 +7,11 @@ const axiosInstance = axios.create({
     headers: {'Content-Type': 'application/json'}
 })
 
-export const getAllCars = async () =>{
-    const {data} = await axiosInstance.get<ICar>('/cars')
-    return data
+export const getAllCars = async ():Promise<ICar[]> =>{
+    const axiosResponse = await axiosInstance.get<ICar>('/cars')
+    return axiosResponse.data
 }
 
 export const saveCar = async (car:ICar)=>{
-    const {data} = await axiosInstance.post<ICar>('/cars',car)
-    return data
+    await axiosInstance.post<ICar>('/cars',car)
 }
