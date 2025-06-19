@@ -1,6 +1,9 @@
 
 
 const AuthRecipesComponent = () => {
+
+    const {recipes}
+
     return (
         <div>
 

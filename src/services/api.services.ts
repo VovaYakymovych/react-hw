@@ -1,6 +1,8 @@
 import axios from "axios";
 import {IAuthUser} from "../models/IAuthUser.ts";
 import {ILoginInputData} from "../models/ILoginInputData.ts";
+import {IRecipe} from "../models/IRecipe.ts";
+import {IDummyBaseResponse} from "../models/IDummyBaseResponse.ts";
 
 const axiosInstance = axios.create({
     baseURL: 'https://dummyjson.com/auth',
@@ -18,3 +20,13 @@ export const login = async ({username, password, expiresInMins}:ILoginInputData)
         throw error;
     }
 };
+
+export const getAllRecipes = async ():Promise<IRecipe[]> => {
+    try {
+        const response = await axios.get<IDummyBaseResponse>('/recipes');
+        return response.data.recipes;
+    } catch (error) {
+        console.error("Failed to fetch recipes:", error);
+        throw error;
+    }
+}
