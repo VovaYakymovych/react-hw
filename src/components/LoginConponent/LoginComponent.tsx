@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import {loginValidator} from "../../validators/LoginFormSubmit.tsx";
 import {ILoginInputData} from "../../models/ILoginInputData.ts";
 import './LoginComponent.css'
+import {login} from "../../services/api.services.ts";
 
 const LoginComponent = () => {
 
@@ -19,7 +20,7 @@ const LoginComponent = () => {
             expiresInMins: 1
         }
 
-        console.log(loginData);
+        login(loginData);
     };
 
     return (
