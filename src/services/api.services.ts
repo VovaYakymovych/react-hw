@@ -40,17 +40,24 @@ export const getAllRecipes = async ():Promise<IRecipe[]> => {
     }
 }
 
-export const refreshTokens = async ()=> {
-    const user = getLSInfo<IAuthUser>('user')
+export const refreshTokens = async () => {
+    const user = getLSInfo<IAuthUser>('user');
     try {
-        const {data: {accessToken, refreshToken}} = await axiosInstance.post<IToken>('/refresh', {
+        const { data: { accessToken, refreshToken } } = await axiosInstance.post<IToken>('/refresh', {
             refreshToken: user.refreshToken,
             expiresInMins: 5
         });
-        user.accessToken = accessToken;
-        user.refreshToken = refreshToken;
+
+        const updatedUser = {
+            ...user,
+            accessToken,
+            refreshToken
+        };
+        localStorage.setItem('user', JSON.stringify(updatedUser));
+        axiosInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
+
     } catch (error) {
         console.error("Failed to refresh tokens:", error);
         throw error;
     }
-}
+};

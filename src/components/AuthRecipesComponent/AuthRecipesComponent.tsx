@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getAllRecipes} from "../../services/api.services.ts";
+import {getAllRecipes, refreshTokens} from "../../services/api.services.ts";
 import {IRecipe} from "../../models/IRecipe.ts";
 import AuthRecipeComponent from "../AuthRecipeComponent/AuthRecipeComponent.tsx";
 import PaginationComponent from "../PaginationComponent/PaginationComponent.tsx";
@@ -8,9 +8,21 @@ const AuthRecipesComponent = () => {
 
     const [recipes, setRecipes] = useState<IRecipe[]>([]);
 
-    useEffect(()=> {
-        getAllRecipes().then(response => setRecipes(response))
+    useEffect(() => {
+        getAllRecipes()
+            .then(setRecipes)
+            .catch(async (error) => {
+                console.error("Initial fetch failed:", error);
+                try {
+                    await refreshTokens();
+                    const refreshedRecipes = await getAllRecipes();
+                    setRecipes(refreshedRecipes);
+                } catch (refreshError) {
+                    console.error("Failed after refreshing token:", refreshError);
+                }
+            });
     }, []);
+
 
     return (
         <>

@@ -16,7 +16,7 @@ const LoginComponent = () => {
         login({
             username: data.username,
             password: data.password,
-            expiresInMins: 5
+            expiresInMins: 1
         })
     };
 
