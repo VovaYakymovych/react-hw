@@ -14,13 +14,11 @@ const LoginComponent = () => {
 
     const LoginFormSubmit = (data: ILoginInputData) => {
 
-        const loginData = {
+        login({
             username: data.username,
             password: data.password,
             expiresInMins: 5
-        }
-
-        login(loginData);
+        })
     };
 
     return (

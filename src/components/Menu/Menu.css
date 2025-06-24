@@ -20,9 +20,13 @@ button{
     font-weight: 700;
     color: #dadee3;
 
-    transition: 0.3s;
+    transition: 0.17s;
 }
 button:hover{
     background-color: #d3c8ca;
     color: #ae1130;
+}
+button:active{
+    background-color: #510816;
+    color: #dadee3;
 }
