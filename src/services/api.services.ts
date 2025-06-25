@@ -18,6 +18,8 @@ axiosInstance.interceptors.request.use(request => {
     return request
 })
 
+// ===========================================================================================================
+
 export const login = async ({username, password, expiresInMins}:ILoginInputData):Promise<IAuthUser> => {
     try {
         const {data:UserWithTokens} = await axiosInstance.post('/login', {username, password, expiresInMins});
@@ -30,6 +32,8 @@ export const login = async ({username, password, expiresInMins}:ILoginInputData)
     }
 };
 
+// ===========================================================================================================
+
 export const getAllRecipes = async ():Promise<IRecipe[]> => {
     try {
         const {data: {recipes}} = await axiosInstance.get<IDummyBaseResponse>('/recipes');
@@ -39,6 +43,8 @@ export const getAllRecipes = async ():Promise<IRecipe[]> => {
         throw error;
     }
 }
+
+// ===========================================================================================================
 
 export const refreshTokens = async () => {
     const user = getLSInfo<IAuthUser>('user');
@@ -59,3 +65,6 @@ export const refreshTokens = async () => {
         throw error;
     }
 };
+
+// ===========================================================================================================
+
