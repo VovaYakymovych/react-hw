@@ -34,9 +34,12 @@ export const login = async ({username, password, expiresInMins}:ILoginInputData)
 
 // ===========================================================================================================
 
-export const getAllRecipes = async ():Promise<IRecipe[]> => {
+export const getAllRecipes = async (page:string):Promise<IRecipe[]> => {
     try {
-        const {data: {recipes}} = await axiosInstance.get<IDummyBaseResponse>('/recipes');
+        const limit = 10
+        const skip = limit * (+page) - limit;
+
+        const {data: {recipes}} = await axiosInstance.get<IDummyBaseResponse>('/recipes'+ '?limit=10' + '&skip=' + skip);
         return recipes
     } catch (error) {
         console.error("Failed to fetch recipes:", error);
