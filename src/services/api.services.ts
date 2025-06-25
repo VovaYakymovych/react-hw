@@ -7,7 +7,7 @@ import {getLSInfo} from "./helpers.ts";
 import {IToken} from "../models/IToken.ts";
 
 const axiosInstance = axios.create({
-    baseURL: 'https://dummyjson.com/auth',
+    baseURL: import.meta.env.VITE_BASE_API_URL,
     headers: {}
 });
 
@@ -45,15 +45,13 @@ export const refreshTokens = async () => {
     try {
         const { data: { accessToken, refreshToken } } = await axiosInstance.post<IToken>('/refresh', {
             refreshToken: user.refreshToken,
-            expiresInMins: 5
+            expiresInMins: import.meta.env.VITE_EXPIRES_IN_MINS
         });
 
-        const updatedUser = {
-            ...user,
-            accessToken,
-            refreshToken
-        };
-        localStorage.setItem('user', JSON.stringify(updatedUser));
+        user.accessToken= accessToken;
+        user.refreshToken= refreshToken;
+
+        localStorage.setItem('user', JSON.stringify(user));
         axiosInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
 
     } catch (error) {

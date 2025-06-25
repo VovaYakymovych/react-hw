@@ -16,7 +16,7 @@ const LoginComponent = () => {
         login({
             username: data.username,
             password: data.password,
-            expiresInMins: 1
+            expiresInMins: import.meta.env.VITE_EXPIRES_IN_MINS
         })
     };
 

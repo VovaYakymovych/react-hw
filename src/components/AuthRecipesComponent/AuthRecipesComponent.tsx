@@ -17,6 +17,7 @@ const AuthRecipesComponent = () => {
                     await refreshTokens();
                     const refreshedRecipes = await getAllRecipes();
                     setRecipes(refreshedRecipes);
+                    console.log('Recipes successfully fetched after refreshing tokens');
                 } catch (refreshError) {
                     console.error("Failed after refreshing token:", refreshError);
                 }
