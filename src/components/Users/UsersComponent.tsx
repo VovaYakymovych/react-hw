@@ -4,6 +4,7 @@ import {IUser} from "../../models/IUser.ts";
 import {IDummyJsonUsersResponse} from "../../models/IDummyJsonUsersResponse.ts";
 import UserComponent from "./UserComponent.tsx";
 import {useSearchParams} from "react-router-dom";
+import PaginationComponent from "../paginationComponent/PaginationComponent.tsx";
 
 const UsersComponent = () => {
     const [query]=useSearchParams({page: '1'})
@@ -18,6 +19,7 @@ const UsersComponent = () => {
     return (
         <div className={'api-res-component'}>
             {users.map((user:IUser) => <UserComponent user={user} key={user.id}/>)}
+            <PaginationComponent/>
         </div>
     )
 };

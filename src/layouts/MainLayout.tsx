@@ -1,12 +1,14 @@
 
 import './MainLayout.css'
-import {Outlet} from "react-router-dom";
+
+import UsersComponent from "../components/Users/UsersComponent.tsx";
 
 function MainLayout() {
 
   return (
     <>
-        <Outlet/>
+
+        <UsersComponent/>
     </>
   )
 }
