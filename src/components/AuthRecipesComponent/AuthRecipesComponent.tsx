@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {getAllRecipes, refreshTokens} from "../../services/api.services.ts";
 import {IRecipe} from "../../models/IRecipe.ts";
-import AuthRecipeComponent from "../AuthRecipeComponent/AuthRecipeComponent.tsx";
+import AuthRecipeComponent from "./AuthRecipeComponent.tsx";
 import PaginationComponent from "../PaginationComponent/PaginationComponent.tsx";
 import {useSearchParams} from "react-router-dom";
 

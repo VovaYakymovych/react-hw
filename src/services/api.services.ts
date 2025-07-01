@@ -6,7 +6,7 @@ import {IDummyBaseResponse} from "../models/IDummyBaseResponse.ts";
 import {getLSInfo} from "./helpers.ts";
 import {IToken} from "../models/IToken.ts";
 
-const axiosInstance = axios.create({
+export const axiosInstance = axios.create({
     baseURL: import.meta.env.VITE_BASE_API_URL,
     headers: {}
 });

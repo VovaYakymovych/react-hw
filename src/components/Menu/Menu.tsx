@@ -8,6 +8,7 @@ const Menu = () => {
 
             <Link to="login"><button className={'headerAndPaginationButton'}>Login</button></Link>
             <Link to={'auth/recipes'}><button className={'headerAndPaginationButton'}>Show Recipes</button></Link>
+            <Link to={'users'}><button className={'headerAndPaginationButton'}>Show Users</button></Link>
         </div>
     );
 };

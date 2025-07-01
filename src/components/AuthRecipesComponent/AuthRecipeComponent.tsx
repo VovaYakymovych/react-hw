@@ -8,7 +8,7 @@ type RecipesProps = {
 const AuthRecipeComponent: FC<RecipesProps> = ({item}) => {
     return (
         <div>
-            {item?.id}
+            {item?.id} - {item?.name}
         </div>
     );
 };
