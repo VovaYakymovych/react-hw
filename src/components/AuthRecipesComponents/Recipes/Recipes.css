@@ -1,0 +1,9 @@
+.AllRecipes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 34px;
+    padding: 34px 0;
+    background: var(--bg);
+    transition: background 0.3s;
+}

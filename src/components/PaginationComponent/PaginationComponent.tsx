@@ -1,4 +1,5 @@
 import {useSearchParams} from "react-router-dom";
+import './Pagination.css'
 
 const PaginationComponent = () => {
 
@@ -6,7 +7,7 @@ const PaginationComponent = () => {
     let currentPage = Number(query.get('page') || '1');
 
     return (
-        <div>
+        <div className={'PaginationComponent'}>
             <button onClick={ ()=>{
                 setQuery({page:(--currentPage).toString()})
             }} disabled={currentPage === 1}>

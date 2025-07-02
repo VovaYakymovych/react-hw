@@ -1,0 +1,8 @@
+.PaginationComponent{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 34px 0;
+    background: var(--bg);
+    transition: background 0.3s, color 0.3s;
+}

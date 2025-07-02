@@ -5,6 +5,11 @@
 
     padding-top: 200px;
 }
+
+body{
+    background-color: var(--bg);
+    transition: background-color 0.3s;
+}
 .loginForm{
     width: 400px;
     height: 300px;
