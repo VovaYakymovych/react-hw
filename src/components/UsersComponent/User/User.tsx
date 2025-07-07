@@ -1,4 +1,4 @@
-import {IUser} from "../../models/IUser.ts";
+import {IUser} from "../../../models/IUser.ts";
 import {FC} from "react";
 
 type UserProps = {

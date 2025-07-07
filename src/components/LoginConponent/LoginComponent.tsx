@@ -34,7 +34,7 @@ const LoginComponent = () => {
                     <input type="password" {...register("password")} placeholder="Password"/>
                 </div>
 
-                <button>Log in</button>
+                <button className={'LoginButton'}>Log in</button>
             </form>
 
         </div>

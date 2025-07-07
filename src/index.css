@@ -14,6 +14,8 @@
     --bg: #fff;
     --header-bg: #df173f;
     --button-bg: #970724;
+    --error-input-color: #df173f;
+    --pagination-text-color: #000000;
 }
 
 [data-theme="dark"] {
@@ -22,6 +24,8 @@
     --color: #fff;
     --header-bg: #670619;
     --button-bg: #930521;
+    --error-input-color: #fff;
+    --pagination-text-color: #fff;
 }
 
 body {

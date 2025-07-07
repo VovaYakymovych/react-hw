@@ -1,6 +1,6 @@
-import {useFetch} from "../../hooks/useFetch.tsx";
-import {IUser} from "../../models/IUser.ts";
-import User from "./User.tsx";
+import {useFetch} from "../../../hooks/useFetch.tsx";
+import {IUser} from "../../../models/IUser.ts";
+import User from "../User/User.tsx";
 
 
 const Users = () => {

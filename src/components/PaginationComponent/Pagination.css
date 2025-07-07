@@ -1,8 +1,19 @@
-.PaginationComponent{
+.pagination{
     display: flex;
     gap: 20px;
     justify-content: center;
+    align-items: center;
     padding: 34px 0;
     background: var(--bg);
     transition: background 0.3s, color 0.3s;
+    color: var(--pagination-text-color);
+}
+
+.page-btn.active {
+    background-color: #ae1130;
+    padding: 5px;
+    border-color: #510816;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
 }
