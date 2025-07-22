@@ -1,21 +1,23 @@
 import {useAppDispatch, useAppSelector} from "../../../redux/store.ts";
 import {useEffect} from "react";
 import {userActions} from "../../../redux/slices/userSlice.ts";
-import {IUser} from "../../../models/IUser.ts";
+import User from "../user/User.tsx";
+import './users.css'
 
 
 const Users = () => {
+
     const dispatch = useAppDispatch();
     const users = useAppSelector((state) => state.userStoreSlice.users);
-    useEffect(() => {
 
+    useEffect(() => {
         dispatch(userActions.loadUsers());
     }, []);
 
     return (
-        <>
-            {users.map((user: IUser) => (<div key={user.id}> {user.name}</div>))}
-        </>
+        <div className={'users'}>
+            {users.map(value => <User key={value.id} item={value}/>)}
+        </div>
     );
 };
 

@@ -1,0 +1,17 @@
+.users{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 144px 44px;
+
+    gap: 44px;
+    justify-content: center;
+}
+.name{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ae1130;
+}
+.userP{
+    font-weight: 500;
+    color: #000000;
+}

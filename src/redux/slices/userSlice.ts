@@ -6,6 +6,7 @@ import {getApiData} from "../../services/service.api.ts";
 
 type UserSliceType = {
     users: IUser[];
+    user: IUser | null;
 }
 
 const loadUsers = createAsyncThunk('loadUsers', async (_,thunkAPI) => {
@@ -13,11 +14,16 @@ const loadUsers = createAsyncThunk('loadUsers', async (_,thunkAPI) => {
     return thunkAPI.fulfillWithValue(users)
 })
 
-const initUserState:UserSliceType = {users: []};
+const loadUser = createAsyncThunk('loadUser', async (id:string ,thunkAPI) => {
+    const user = await getApiData<IUser>('/users/' + id);
+    return thunkAPI.fulfillWithValue(user)
+})
+
+const initUserState:UserSliceType = {users: [], user: null};
 
 
 export const userSlice = createSlice({
-    name:'UserSlice',
+    name:'UsersSlice',
     initialState: initUserState,
     reducers: {},
     extraReducers: builder => builder
@@ -28,7 +34,9 @@ export const userSlice = createSlice({
             console.log(state);
             console.log(action);
         })
-
+        .addCase(loadUser.fulfilled, (state, action: PayloadAction<IUser>) => {
+            state.user = action.payload
+        })
 })
 
-export  const userActions = {...userSlice.actions, loadUsers};
+export  const userActions = {...userSlice.actions, loadUsers, loadUser};
